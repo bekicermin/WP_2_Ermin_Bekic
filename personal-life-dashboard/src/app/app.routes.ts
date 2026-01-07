@@ -9,6 +9,7 @@ import { WaterTrackerComponent } from './trackers/water-tracker/water-tracker.co
 import { StudyTrackerComponent } from './trackers/study-tracker/study-tracker.component';
 import { MealTrackerComponent } from './trackers/meal-tracker/meal-tracker.component';
 import { MoodTrackerComponent } from './trackers/mood-tracker/mood-tracker.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 export const routes: Routes = [
@@ -22,5 +23,6 @@ export const routes: Routes = [
   { path: 'water-tracker', component: WaterTrackerComponent },
   { path: 'study-tracker', component: StudyTrackerComponent },
   { path: 'meal-tracker', component: MealTrackerComponent },
-  { path: 'mood-tracker', component: MoodTrackerComponent }
+  { path: 'mood-tracker', component: MoodTrackerComponent },
+  { path: 'profile', component: ProfileComponent }
 ];

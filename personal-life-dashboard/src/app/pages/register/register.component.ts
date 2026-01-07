@@ -22,7 +22,7 @@ export class RegisterComponent {
 
     // Firestore
     this.firestore.saveUser(user);
-
+    localStorage.setItem('user', JSON.stringify(user));
     alert('Registracija uspješna!');
   }
 }

@@ -1,0 +1,19 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css']
+})
+export class ProfileComponent implements OnInit {
+
+  name: string = '';
+  email: string = '';
+
+  ngOnInit() {
+    const user = JSON.parse(localStorage.getItem('user') || '{}');
+
+    this.name = user.name;
+    this.email = user.email;
+  }
+}
