@@ -21,8 +21,15 @@ export class StudyTrackerComponent {
   }
 
   saveStudy() {
-    localStorage.setItem('study', this.study.toString());
-    this.savedStudy = this.study;
+    const previous = localStorage.getItem('study');
+    let total = this.study;
+
+    if (previous !== null) {
+      total = Number(previous) + this.study;
+    }
+
+    localStorage.setItem('study', total.toString());
+    this.savedStudy = total;
     this.study = 0;
   }
 }

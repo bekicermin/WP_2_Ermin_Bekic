@@ -21,8 +21,15 @@ export class WaterTrackerComponent {
   }
 
   saveWater() {
-    localStorage.setItem('water', this.water.toString());
-    this.savedWater = this.water;
+    const previous = localStorage.getItem('water');
+    let total = this.water;
+
+    if (previous !== null) {
+      total = Number(previous) + this.water;
+    }
+
+    localStorage.setItem('water', total.toString());
+    this.savedWater = total;
     this.water = 0;
   }
 }

@@ -21,8 +21,15 @@ export class MealTrackerComponent {
   }
 
   saveMeals() {
-    localStorage.setItem('meals', this.meals.toString());
-    this.savedMeals = this.meals;
+    const previous = localStorage.getItem('meals');
+    let total = this.meals;
+
+    if (previous !== null) {
+      total = Number(previous) + this.meals;
+    }
+
+    localStorage.setItem('meals', total.toString());
+    this.savedMeals = total;
     this.meals = 0;
   }
 }

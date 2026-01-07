@@ -21,8 +21,15 @@ export class SleepTrackerComponent {
   }
 
   saveSleep() {
-    localStorage.setItem('sleep', this.sleep.toString());
-    this.savedSleep = this.sleep;
+    const previous = localStorage.getItem('sleep');
+    let total = this.sleep;
+
+    if (previous !== null) {
+      total = Number(previous) + this.sleep;
+    }
+
+    localStorage.setItem('sleep', total.toString());
+    this.savedSleep = total;
     this.sleep = 0;
   }
 }

@@ -21,8 +21,15 @@ export class MoodTrackerComponent {
   }
 
   saveMood() {
-    localStorage.setItem('mood', this.mood.toString());
-    this.savedMood = this.mood;
+    const previous = localStorage.getItem('mood');
+    let total = this.mood;
+
+    if (previous !== null) {
+      total = Number(previous) + this.mood;
+    }
+
+    localStorage.setItem('mood', total.toString());
+    this.savedMood = total;
     this.mood = 0;
   }
 }
