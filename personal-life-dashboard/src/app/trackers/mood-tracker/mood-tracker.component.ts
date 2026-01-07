@@ -14,9 +14,9 @@ export class MoodTrackerComponent {
   savedMood: number = 0;
 
   ngOnInit() {
-    const data = localStorage.getItem('mood');
-    if (data) {
-      this.savedMood = Number(data);
+    const saved = localStorage.getItem('mood');
+    if (saved !== null) {
+      this.savedMood = Number(saved);
     }
   }
 
@@ -31,5 +31,10 @@ export class MoodTrackerComponent {
     localStorage.setItem('mood', total.toString());
     this.savedMood = total;
     this.mood = 0;
+  }
+
+  resetMood() {
+    localStorage.removeItem('mood');
+    this.savedMood = 0;
   }
 }

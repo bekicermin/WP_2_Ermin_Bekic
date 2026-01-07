@@ -32,4 +32,9 @@ export class SleepTrackerComponent {
     this.savedSleep = total;
     this.sleep = 0;
   }
+
+  resetSleep() {
+    localStorage.removeItem('sleep');
+    this.savedSleep = 0;
+  }
 }

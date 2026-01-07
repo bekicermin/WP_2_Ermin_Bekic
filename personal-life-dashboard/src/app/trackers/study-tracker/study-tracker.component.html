@@ -2,8 +2,14 @@
   <div class="tracker-box">
     <h3>Study Tracker</h3>
 
-    <input type="number" placeholder="Sati učenja" [(ngModel)]="study">
+    <input
+      type="number"
+      placeholder="Sati učenja"
+      [(ngModel)]="study"
+    >
+
     <button (click)="saveStudy()">Save</button>
+    <button (click)="resetStudy()">Reset</button>
 
     <p>Trenutno stanje: {{ savedStudy }} sati</p>
 

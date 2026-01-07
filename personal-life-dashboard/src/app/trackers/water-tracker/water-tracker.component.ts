@@ -14,9 +14,9 @@ export class WaterTrackerComponent {
   savedWater: number = 0;
 
   ngOnInit() {
-    const data = localStorage.getItem('water');
-    if (data) {
-      this.savedWater = Number(data);
+    const saved = localStorage.getItem('water');
+    if (saved !== null) {
+      this.savedWater = Number(saved);
     }
   }
 
@@ -31,5 +31,10 @@ export class WaterTrackerComponent {
     localStorage.setItem('water', total.toString());
     this.savedWater = total;
     this.water = 0;
+  }
+
+  resetWater() {
+    localStorage.removeItem('water');
+    this.savedWater = 0;
   }
 }

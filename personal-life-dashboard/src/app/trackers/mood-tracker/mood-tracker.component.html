@@ -2,8 +2,16 @@
   <div class="tracker-box">
     <h3>Mood Tracker</h3>
 
-    <input type="number" min="1" max="10" placeholder="Raspoloženje (1-10)" [(ngModel)]="mood">
+    <input
+      type="number"
+      min="1"
+      max="10"
+      placeholder="Mood (1-10)"
+      [(ngModel)]="mood"
+    >
+
     <button (click)="saveMood()">Save</button>
+    <button (click)="resetMood()">Reset</button>
 
     <p>Trenutno stanje: {{ savedMood }}</p>
 

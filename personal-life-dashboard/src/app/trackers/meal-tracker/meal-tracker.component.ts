@@ -14,9 +14,9 @@ export class MealTrackerComponent {
   savedMeals: number = 0;
 
   ngOnInit() {
-    const data = localStorage.getItem('meals');
-    if (data) {
-      this.savedMeals = Number(data);
+    const saved = localStorage.getItem('meals');
+    if (saved !== null) {
+      this.savedMeals = Number(saved);
     }
   }
 
@@ -31,5 +31,10 @@ export class MealTrackerComponent {
     localStorage.setItem('meals', total.toString());
     this.savedMeals = total;
     this.meals = 0;
+  }
+
+  resetMeals() {
+    localStorage.removeItem('meals');
+    this.savedMeals = 0;
   }
 }

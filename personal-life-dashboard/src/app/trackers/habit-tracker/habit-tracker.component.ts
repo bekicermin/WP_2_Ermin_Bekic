@@ -10,19 +10,32 @@ import { FormsModule } from '@angular/forms';
 })
 export class HabitTrackerComponent {
 
-  habit: string = '';
-  savedHabit: string = '';
+  habit: number = 0;
+  savedHabit: number = 0;
 
   ngOnInit() {
-    const data = localStorage.getItem('habit');
-    if (data) {
-      this.savedHabit = data;
+    const saved = localStorage.getItem('habit');
+    if (saved !== null) {
+      this.savedHabit = Number(saved);
     }
   }
 
   saveHabit() {
-    localStorage.setItem('habit', this.habit);
-    this.savedHabit = this.habit;
-    this.habit = '';
+    const previous = localStorage.getItem('habit');
+    let total = this.habit;
+
+    if (previous !== null) {
+      total = Number(previous) + this.habit;
+    }
+
+    localStorage.setItem('habit', total.toString());
+    this.savedHabit = total;
+    this.habit = 0;
   }
+
+  resetHabit() {
+    localStorage.removeItem('habit');
+    this.savedHabit = 0;
+  }
+
 }

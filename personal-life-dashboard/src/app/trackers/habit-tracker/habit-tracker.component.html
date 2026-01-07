@@ -2,10 +2,16 @@
   <div class="tracker-box">
     <h3>Habit Tracker</h3>
 
-    <input type="text" placeholder="Nova navika" [(ngModel)]="habit">
-    <button (click)="saveHabit()">Save</button>
+    <input
+      type="number"
+      placeholder="Broj navika danas"
+      [(ngModel)]="habit"
+    >
 
-    <p>Trenutna navika: {{ savedHabit }}</p>
+    <button (click)="saveHabit()">Save</button>
+    <button (click)="resetHabit()">Reset</button>
+
+    <p>Trenutno stanje: {{ savedHabit }} navika</p>
 
     <a routerLink="/my-trackers">Nazad</a>
   </div>

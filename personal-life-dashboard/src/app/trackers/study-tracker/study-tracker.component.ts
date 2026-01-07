@@ -14,9 +14,9 @@ export class StudyTrackerComponent {
   savedStudy: number = 0;
 
   ngOnInit() {
-    const data = localStorage.getItem('study');
-    if (data) {
-      this.savedStudy = Number(data);
+    const saved = localStorage.getItem('study');
+    if (saved !== null) {
+      this.savedStudy = Number(saved);
     }
   }
 
@@ -31,5 +31,10 @@ export class StudyTrackerComponent {
     localStorage.setItem('study', total.toString());
     this.savedStudy = total;
     this.study = 0;
+  }
+
+  resetStudy() {
+    localStorage.removeItem('study');
+    this.savedStudy = 0;
   }
 }

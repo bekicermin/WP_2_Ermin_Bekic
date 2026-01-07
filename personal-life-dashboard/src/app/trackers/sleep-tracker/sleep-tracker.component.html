@@ -5,6 +5,14 @@
     <input type="number" placeholder="Sati spavanja" [(ngModel)]="sleep">
     <button (click)="saveSleep()">Save</button>
 
+	<button (click)="resetSleep()">Reset</button>
+
+	<br><br>
+
+
+<a routerLink="/my-trackers">Nazad</a>
+
+
     <p>Trenutno stanje: {{ savedSleep }} sati</p>
 
     <a routerLink="/my-trackers">Nazad</a>

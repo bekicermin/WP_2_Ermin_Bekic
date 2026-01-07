@@ -2,8 +2,14 @@
   <div class="tracker-box">
     <h3>Water Tracker</h3>
 
-    <input type="number" placeholder="Čaše vode" [(ngModel)]="water">
+    <input
+      type="number"
+      placeholder="Čaše vode"
+      [(ngModel)]="water"
+    >
+
     <button (click)="saveWater()">Save</button>
+    <button (click)="resetWater()">Reset</button>
 
     <p>Trenutno stanje: {{ savedWater }} čaša</p>
 

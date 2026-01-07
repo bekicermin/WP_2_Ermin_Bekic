@@ -2,8 +2,14 @@
   <div class="tracker-box">
     <h3>Meal Tracker</h3>
 
-    <input type="number" placeholder="Broj obroka" [(ngModel)]="meals">
+    <input
+      type="number"
+      placeholder="Broj obroka"
+      [(ngModel)]="meals"
+    >
+
     <button (click)="saveMeals()">Save</button>
+    <button (click)="resetMeals()">Reset</button>
 
     <p>Trenutno stanje: {{ savedMeals }} obroka</p>
 
