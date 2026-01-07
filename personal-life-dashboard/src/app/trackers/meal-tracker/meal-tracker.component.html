@@ -1,1 +1,12 @@
-<p>meal-tracker works!</p>
+<div class="page-background">
+  <div class="tracker-box">
+    <h3>Meal Tracker</h3>
+
+    <input type="number" placeholder="Broj obroka" [(ngModel)]="meals">
+    <button (click)="saveMeals()">Save</button>
+
+    <p>Trenutno stanje: {{ savedMeals }} obroka</p>
+
+    <a routerLink="/my-trackers">Nazad</a>
+  </div>
+</div>

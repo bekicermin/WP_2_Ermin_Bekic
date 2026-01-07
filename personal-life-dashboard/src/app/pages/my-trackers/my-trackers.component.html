@@ -1,10 +1,17 @@
-<h2>My Trackers</h2>
+<div class="trackers-container">
 
-<ul>
-  <li><a routerLink="/habit-tracker">Habit Tracker</a></li>
-  <li><a routerLink="/sleep-tracker">Sleep Tracker</a></li>
-  <li><a routerLink="/study-tracker">Study Tracker</a></li>
-  <li><a routerLink="/water-tracker">Water Tracker</a></li>
-  <li><a routerLink="/meal-tracker">Meal Tracker</a></li>
-  <li><a routerLink="/mood-tracker">Mood Tracker</a></li>
-</ul>
+  <h2>My Trackers</h2>
+  <p class="subtitle">Izaberite tracker koji želite koristiti</p>
+
+  <div class="trackers-grid">
+    <a routerLink="/habit-tracker" class="tracker-card">Habit Tracker</a>
+    <a routerLink="/sleep-tracker" class="tracker-card">Sleep Tracker</a>
+    <a routerLink="/study-tracker" class="tracker-card">Study Tracker</a>
+    <a routerLink="/water-tracker" class="tracker-card">Water Tracker</a>
+    <a routerLink="/meal-tracker" class="tracker-card">Meal Tracker</a>
+    <a routerLink="/mood-tracker" class="tracker-card">Mood Tracker</a>
+  </div>
+
+  <a routerLink="/dashboard" class="back-btn">← Back to Dashboard</a>
+
+</div>

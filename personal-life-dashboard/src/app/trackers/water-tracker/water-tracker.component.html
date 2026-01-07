@@ -1,8 +1,12 @@
-<h3>Water Tracker</h3>
+<div class="page-background">
+  <div class="tracker-box">
+    <h3>Water Tracker</h3>
 
-<p>Unesite količinu popijene vode:</p>
+    <input type="number" placeholder="Čaše vode" [(ngModel)]="water">
+    <button (click)="saveWater()">Save</button>
 
-<input type="number" placeholder="u čašama">
-<button>Save</button>
+    <p>Trenutno stanje: {{ savedWater }} čaša</p>
 
-<p>(Podaci će se kasnije čuvati u bazi)</p>
+    <a routerLink="/my-trackers">Nazad</a>
+  </div>
+</div>

@@ -1,1 +1,12 @@
-<p>study-tracker works!</p>
+<div class="page-background">
+  <div class="tracker-box">
+    <h3>Study Tracker</h3>
+
+    <input type="number" placeholder="Sati učenja" [(ngModel)]="study">
+    <button (click)="saveStudy()">Save</button>
+
+    <p>Trenutno stanje: {{ savedStudy }} sati</p>
+
+    <a routerLink="/my-trackers">Nazad</a>
+  </div>
+</div>

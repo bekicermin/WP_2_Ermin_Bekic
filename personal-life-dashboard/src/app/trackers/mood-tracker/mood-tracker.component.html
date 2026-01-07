@@ -1,1 +1,12 @@
-<p>mood-tracker works!</p>
+<div class="page-background">
+  <div class="tracker-box">
+    <h3>Mood Tracker</h3>
+
+    <input type="number" min="1" max="10" placeholder="Raspoloženje (1-10)" [(ngModel)]="mood">
+    <button (click)="saveMood()">Save</button>
+
+    <p>Trenutno stanje: {{ savedMood }}</p>
+
+    <a routerLink="/my-trackers">Nazad</a>
+  </div>
+</div>

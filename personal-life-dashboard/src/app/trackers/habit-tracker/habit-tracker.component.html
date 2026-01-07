@@ -1,1 +1,12 @@
-<p>habit-tracker works!</p>
+<div class="page-background">
+  <div class="tracker-box">
+    <h3>Habit Tracker</h3>
+
+    <input type="text" placeholder="Nova navika" [(ngModel)]="habit">
+    <button (click)="saveHabit()">Save</button>
+
+    <p>Trenutna navika: {{ savedHabit }}</p>
+
+    <a routerLink="/my-trackers">Nazad</a>
+  </div>
+</div>

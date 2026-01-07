@@ -1,0 +1,36 @@
+.page-background {
+  min-height: 100vh;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tracker-box {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 6px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}

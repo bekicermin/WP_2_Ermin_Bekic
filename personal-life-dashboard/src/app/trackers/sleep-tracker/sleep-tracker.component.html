@@ -1,1 +1,12 @@
-<p>sleep-tracker works!</p>
+<div class="page-background">
+  <div class="tracker-box">
+    <h3>Sleep Tracker</h3>
+
+    <input type="number" placeholder="Sati spavanja" [(ngModel)]="sleep">
+    <button (click)="saveSleep()">Save</button>
+
+    <p>Trenutno stanje: {{ savedSleep }} sati</p>
+
+    <a routerLink="/my-trackers">Nazad</a>
+  </div>
+</div>
