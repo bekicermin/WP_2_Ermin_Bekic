@@ -29,6 +29,7 @@ login() {
   if (this.email === user.email && this.password === user.password) {
     document.body.className = user.theme;
     alert('Login uspješan!');
+    this.router.navigate(['/dashboard']);
   } else {
     alert('Pogrešan email ili password');
   }
