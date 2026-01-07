@@ -1,24 +1,24 @@
 <h2>Registracija</h2>
 
-<form>
+<form (submit)="$event.preventDefault()">
   <div>
     <label>Ime:</label><br>
-    <input type="text">
+    <input type="text" #name>
   </div>
 
   <div>
     <label>Email:</label><br>
-    <input type="email">
+    <input type="email" #email>
   </div>
 
   <div>
     <label>Password:</label><br>
-    <input type="password">
+    <input type="password" #password>
   </div>
 
   <div>
     <label>Tema:</label><br>
-    <select>
+    <select #theme>
       <option value="light">Svijetla</option>
       <option value="dark">Tamna</option>
       <option value="blue">Plava</option>
@@ -26,7 +26,11 @@
   </div>
 
   <br>
-  <button type="submit">Register</button>
+  <button
+    type="button"
+    (click)="register(name.value, email.value, password.value, theme.value)">
+    Register
+  </button>
 </form>
 
 <p>

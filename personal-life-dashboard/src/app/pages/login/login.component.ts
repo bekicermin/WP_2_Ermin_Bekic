@@ -16,15 +16,23 @@ export class LoginComponent {
 
   constructor(private router: Router) {}
 
-  login() {
-    const user = JSON.parse(localStorage.getItem('user') || '{}');
+login() {
+  const storedUser = localStorage.getItem('user');
 
-    if (this.email === user.email && this.password === user.password) {
-      alert('Login uspješan!');
-    } else {
-      alert('Pogrešan email ili password');
-    }
+  if (!storedUser) {
+    alert('Nema registrovanog korisnika');
+    return;
   }
+
+  const user = JSON.parse(storedUser);
+
+  if (this.email === user.email && this.password === user.password) {
+    alert('Login uspješan!');
+  } else {
+    alert('Pogrešan email ili password');
+  }
+}
+
 
   goToRegister() {
     this.router.navigate(['/register']);
