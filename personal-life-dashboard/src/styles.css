@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+.dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+
+.blue {
+  background-color: #e6f0ff;
+  color: #003366;
+}
